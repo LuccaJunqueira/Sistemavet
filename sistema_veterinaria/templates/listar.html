@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styleform.css">
+    <title>Cadastro Tutores</title>
+</head>
+
+<body>
+    <header>
+        <h1>Sistema Vivet</h1>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="http://localhost:5000/">Inicio</a></li>
+            <li><a href="http://localhost:5000/cadastro">Cadastro Tutores</a></li>
+            <li><a href="http://localhost:5000/lista/tutores">Lista turores</a></li>
+            <li><a href="http://localhost:5000/cadastro/pets">Cadastro Animais</a></li>
+            <li><a href="http://localhost:5000/lista/pets">Lista Animais</a></li>   
+        </ul>
+
+        <form>
+            <input type="search" name="inputpesquisa" placeholder="Pesquise aqui">
+        </form>
+    </nav>
+    
+    <div class="container">
+        <table>
+            <tr>
+                <td>Nome</td><td>Sobrenome</td><td>Email</td><td>Endereco</td><td>Telefone</td><td>CPF</td><td>Idade</td>
+            </tr>
+            
+            {% for item in Lista %}
+            <tr>
+                <th>{{item[0]}}</th>
+                <th>{{item[1]}}</th>
+                <th>{{item[2]}}</th>
+                <th>{{item[3]}}</th>
+                <th>{{item[4]}}</th>
+                <th>{{item[5]}}</th>
+                <th>{{item[6]}}</th>
+                <th><a href="/lista/tutores/{{item[5]}}"><button>Atualizar</button></a></th>
+                <th><button onclick="funcao1('{{item[5]}}')">Deletar</button></th>
+            </tr>
+            {% endfor %}
+        </table>
+
+<script>
+function funcao1(itemIndex) {
+    var r = confirm("Tem certeza que deseja excluir esse tutor?");
+    if (r == true) {
+        window.location.href = "/lista/tutores/" + itemIndex;
+    } else {
+        document.getElementById("demo").innerHTML = "Você pressionou Cancelar!";
+    }   
+}
+</script>
+
+    </div>
+    <footer>
+        <p>©Copyright 2024 by Vitoria Fonseca. All rights reserved</p>
+    </footer>
+
+</body>
+</html>
+    

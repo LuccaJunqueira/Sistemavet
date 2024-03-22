@@ -1,0 +1,15 @@
+body{
+    background-image:('A4 Branco e Lilás.png;');
+}
+
+header{
+    background-color: rgb(229, 113, 156);
+}
+
+.menu{
+    background-color: rgb(246, 174, 200);
+}
+
+footer{
+    background-color: rgb(242, 234, 116);
+}
