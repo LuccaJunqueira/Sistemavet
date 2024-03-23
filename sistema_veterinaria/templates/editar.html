@@ -15,10 +15,10 @@
     <nav class="menu">
         <ul>
             <li><a href="http://localhost:5000/">Inicio</a></li>
-            <li><a href="http://localhost:5000/cadastro">Cadastro Tutores</a></li>
+            <li><a href="http://localhost:5000/cadastrar/tutores">Cadastro Tutores</a></li>
             <li><a href="http://localhost:5000/lista/tutores">Lista turores</a></li>
-            <li><a href="http://localhost:5000/cadastro/pets">Cadastro Animais</a></li>
-            <li><a href="http://localhost:5000/lista/pets">Lista Animais</a></li>   
+            <li><a href="http://localhost:5000/cadastrar/pets">Cadastro Animais</a></li>
+            <li><a href="http://localhost:5000/lista/pets">Lista Animais</a></li>    
         </ul>
 
         <form>
@@ -32,21 +32,21 @@
             <!--Campo usado agrupar dados relacionados em um formulário--> 
                 <legend>Atualizar dados do Tutor</legend>  
             <!--Define uma legenda para o elemento <fieldset> -->
-                <label for="inputNameT" class="sr-only">Primeiro Nome: </label><br>    
-                <input type="text" name="inputNameT" id="inputNameT" class="form-control" placeholder="Digite o primeiro nome" value={{Lista[0]}} required autofocus><br>
-                <label for="inputLastName">Sobrenome:</label><br>
-                <input type="text" name="inputLastName" id="inputLastName" class="form-control" placeholder="Digite o sobrenome" value={{Lista[1]}} required><br>
-                <label for="inputEmail">Email:</label><br>
-                <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Digite o email" value={{Lista[2]}} required><br>
-                <label for="inputAddress">Endereco:</label><br>
-                <input type="text" name="inputAddress" id="inputAddress" class="form-control" placeholder="Digite o endereco" value={{Lista[3]}} required>
-                <label for="inputPhone">Telefone:</label><br>
-                <input type="tel" name="inputPhone" id="inputPhone" class="form-control"  placeholder="Digite o numero de telefone" value={{Lista[4]}} pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"required><br>
+                <label for="inputCpfTutor">CPF:</label><br>
+                <input type="number" name="inputCpfTutor" id="inputCpfTutor" class="form-control" placeholder="Digite o endereco" value={{Lista[0]}} required>
+                <label for="inputNameTutor" class="sr-only">Primeiro Nome: </label><br>    
+                <input type="text" name="inputNameTutor" id="inputNameTutor" class="form-control" placeholder="Digite o primeiro nome" value={{Lista[1]}} required autofocus><br>
+                <label for="inputLastNameTutor">Sobrenome:</label><br>
+                <input type="text" name="inputLastNameTutor" id="inputLastNameTutor" class="form-control" placeholder="Digite o sobrenome" value={{Lista[2]}} required><br>
+                <label for="inputEmailTutor">Email:</label><br>
+                <input type="text" name="inputEmailTutor" id="inputEmailTutor" class="form-control" placeholder="Digite o email" value={{Lista[3]}} required><br>
+                <label for="inputAddressTutor">Endereco:</label><br>
+                <input type="text" name="inputAddressTutor" id="inputAddressTutor" class="form-control" placeholder="Digite o endereco" value={{Lista[4]}} required>
+                <label for="inputPhoneTutor">Telefone:</label><br>
+                <input type="number" name="inputPhoneTutor" id="inputPhoneTutor" class="form-control"  placeholder="Digite o numero de telefone" value={{Lista[5]}} required><br>
                 <!--Pattern especifica uma expressão regular na qual o valor do elemento <input> é verificado-->
-                <label for="inputCpf">CPF:</label><br>
-                <input type="text" name="inputCPF" id="inputCPF" class="form-control" placeholder="Digite o endereco" value={{Lista[5]}} required>
-                <label for="inputAgeT">Idade:</label><br>
-                <input type="text" name="inputAgeT" id="inputAgeT" class="form-control" placeholder="Digite a idade" value={{Lista[6]}} required>
+                <label for="inputAgeTutor">Idade:</label><br>
+                <input type="number" name="inputAgeTutor" id="inputAgeTutor" class="form-control" placeholder="Digite a idade" value={{Lista[6]}} required>
                 <button id="atualizar" type="submit">Atualizar</button> 
                         
             </fieldset>

@@ -1,15 +1,11 @@
 body{
-    background-image:('A4 Branco e Lilás.png;');
-}
-
-header{
-    background-color: rgb(229, 113, 156);
+    background-color: #b84675;
 }
 
 .menu{
-    background-color: rgb(246, 174, 200);
+    background-color: rgb(229, 113, 156);
 }
 
 footer{
-    background-color: rgb(242, 234, 116);
+    background-color: rgb(196, 10, 41);
 }

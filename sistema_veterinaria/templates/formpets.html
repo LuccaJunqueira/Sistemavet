@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styleform.css">
+    <title>Cadastro Pet</title>
+</head>
+
+<body>
+    <header>
+        <h1>Sistema Vivet</h1>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="http://localhost:5000/">Inicio</a></li>
+            <li><a href="http://localhost:5000/cadastrar/tutores">Cadastro Tutores</a></li>
+            <li><a href="http://localhost:5000/lista/tutores">Lista turores</a></li>
+            <li><a href="http://localhost:5000/cadastrar/pets">Cadastro Animais</a></li>
+            <li><a href="http://localhost:5000/lista/pets">Lista Animais</a></li>   
+        </ul>
+
+        <form>
+            <input type="search" name="inputpesquisa" placeholder="Pesquise aqui">
+        </form>
+    </nav>
+    
+    <div class="container">
+        <form action="/cadastro/pets" method="post">
+            <fieldset>
+            <!--Campo usado agrupar dados relacionados em um formulário--> 
+                <legend>Cadastro de Pets</legend>  
+            <!--Define uma legenda para o elemento <fieldset> -->
+                <label for="inputNamePet">Nome:</label><br>
+                <input type="text" name="inputNamePet" id="inputNamePet" class="form-control" placeholder="Digite o nome" required ><br>
+                <label for="inputSpeciePet" class="sr-only">Espécie: </label><br>    
+                <input type="text" name="inputSpeciePet" id="inputSpeciePet" class="form-control" placeholder="Digite a espécie do animal" required autofocus><br>
+                <label for="inputRacePet">Raça:</label><br>
+                <input type="text" name="inputRacePet" id="inputRacePet" class="form-control" placeholder="Digite a raça do animal" required ><br>
+                <label for="inputColorPet">Cor:</label><br>
+                <input type="text" name="inputColorPet" id="inputColorPet" class="form-control" placeholder="Digite a cor dos pelos" required ><br>
+                <label for="inputAgePet">Idade:</label><br>
+                <input type="number" name="inputAgePet" id="inputAgePet" class="form-control" placeholder="Digite a idade" required ><br>
+                <label for="inputCpfPetTutor">CPF Tutor:</label><br>
+                <input type="text" name="inputCpfPetTutor" id="inputCpfPetTutor" class="form-control" placeholder="Digite o endereco" required ><br>
+                <button id="cadastrar" type="submit">Cadastrar</button>            
+            </fieldset>
+        </form>
+    </div>
+    
+    <div>
+    <p class="mensagem">{{mensagem}}</p>
+    </div>
+    <footer>
+        <p>©Copyright 2024 by Vitoria Fonseca. All rights reserved</p>
+    </footer>
+</body>
+</html>
